@@ -10,14 +10,12 @@ void Train::addCage(bool l) {
     cage->prev = nullptr;
     if (first == nullptr) {
         first = cage;
-    }
-    else if (first->prev == nullptr) {
+    } else if (first->prev == nullptr) {
         first->prev = cage;
         cage->next = first;
         first->next = cage;
         cage->prev = first;
-    }
-    else {
+    } else {
         first->next->prev = cage;
         cage->next = first->next;
         first->next = cage;
